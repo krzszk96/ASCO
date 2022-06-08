@@ -2,24 +2,49 @@
   display: flex;
   flex-direction: row;
   margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @include respond-to('small'){
+    flex-direction: column;
+  }
 }
 
 .left-sidebar-wrap{
   width: 20%;
+
+  @include respond-to('extra-large'){
+    width: 30%;
+  }
+  @include respond-to('small'){
+    width: 100%;
+    padding: 30px;
+  }
 }
 .left-sidebar{
+  
+  min-height: 200px;
   width: 100%;
   height: 100%;
   border-radius: 5px;
   background-color: $primary-light;
+
+  
 }
 .right-side{
   width: 80%;
   margin-left: 50px;
   color: $primary-dark;
+
+  @include respond-to('extra-large'){
+    width: 70%;
+  }
+  @include respond-to('small'){
+    width: 100%;
+    margin-left: 0;
+  }
 }
-.right-side .col{
-  padding: 20px;  
+.right-side .col-auto{
+  padding: 20px;
 }
 .home-page .image{
   background-color: $secondary-light;

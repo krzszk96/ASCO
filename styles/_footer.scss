@@ -8,9 +8,17 @@ footer .container{
   justify-content: space-between;
   margin-top: 3rem;
   margin-bottom: 3rem;
+
+  @include respond-to('medium'){
+    flex-direction: column;
+  }
 }
 footer .container .row{
   width: 50%;
+
+  @include respond-to('medium'){
+    width: 100%;
+  }
 }
 footer .image{
   padding: 5px;
@@ -34,7 +42,12 @@ footer .newsletter{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 7rem;
+  padding-left: 5rem;
+
+  @include respond-to('medium'){
+    padding-left: 0;
+    margin-top: 2rem;
+  }
 }
 footer .newsletter .input-wrap{
   margin-top: 1rem;
@@ -55,6 +68,10 @@ footer .newsletter .news-btn{
   padding: 8px 30px;
   color: $primary-dark;
   background-color: $background-color;
+
+  @include respond-to('large'){
+    margin-top: 1rem;
+  }
 }
 footer .social-wrap img{
   margin-right: 0.7rem;
